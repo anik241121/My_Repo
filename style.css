@@ -193,62 +193,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Smooth Scrolling & Section Offset */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Fixed Header এর জন্য Offset */
-#projects, 
-#about, 
-#skills, 
-#contact {
-  scroll-margin-top: 100px;   
-}
-
-/* Hero Buttons Styling */
-.hero-buttons {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.btn {
-  padding: 14px 34px;
-  border-radius: 50px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-  min-width: 170px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.btn.primary {
-  background: linear-gradient(90deg, #00f5ff, #00c4d4);
-  color: #000000;
-}
-
-.btn.primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 245, 255, 0.4);
-}
-
-.btn.secondary {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #00f5ff;
-}
-
-.btn.secondary:hover {
-  background: #00f5ff;
-  color: #000000;
-  transform: translateY(-4px);
-}
-
 /* Other Sections */
 .container {
   max-width: 1100px;
