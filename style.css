@@ -152,29 +152,124 @@ h2 {
   color: #60a5fa;
 }
 
-/* Projects & Skills same as before but with dark theme */
-.projects, .skills, #about, #contact {
+/* ==================== PROJECTS SECTION ==================== */
+
+.projects {
   background: #1e2937;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .project-card {
   background: #334155;
-  padding: 2rem;
-  border-radius: 16px;
-  transition: 0.3s;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  background: #475569;
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+.project-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.project-content {
+  padding: 1.8rem 1.8rem 2rem;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #e2e8f0;
+}
+
+.project-content p {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 80px;
+}
+
+/* Tech Stack Tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+  background: #475569;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 30px;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: #93c5fd;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
 .skill-list {
   max-width: 700px;
   margin: 0 auto;
